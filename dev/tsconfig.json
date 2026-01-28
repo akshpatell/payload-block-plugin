@@ -15,21 +15,15 @@
   ],
   "compilerOptions": {
     "baseUrl": "./",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "paths": {
-      "@payload-config": [
-        "./payload.config.ts"
-      ],
-      "payload-block-plugin": [
-        "../src/index.ts"
-      ],
-      "payload-block-plugin/client": [
-        "../src/exports/client.ts"
-      ],
-      "payload-block-plugin/rsc": [
-        "../src/exports/rsc.ts"
-      ]
+      "@payload-config": ["./payload.config.ts"],
+      "payload-block-plugin": ["../src/index.ts"],
+      "payload-block-plugin/client": ["../src/exports/client.ts"],
+      "payload-block-plugin/rsc": ["../src/exports/rsc.ts"]
     },
     "noEmit": true,
-    "emitDeclarationOnly": false,
+    "emitDeclarationOnly": false
   }
 }

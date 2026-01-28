@@ -3,7 +3,7 @@ import type { Payload } from 'payload'
 import { devUser } from './helpers/credentials.js'
 
 export const seed = async (payload: Payload) => {
-  const { totalDocs } = await payload.count({
+  const { docs: users } = await payload.find({
     collection: 'users',
     where: {
       email: {
@@ -12,13 +12,22 @@ export const seed = async (payload: Payload) => {
     },
   })
 
-  if (!totalDocs) {
+  const user = users[0]
+
+  if (!user) {
     await payload.create({
       collection: 'users',
       data: devUser,
     })
+  } else {
+    await payload.update({
+      collection: 'users',
+      id: user.id,
+      data: {
+        password: devUser.password,
+      },
+    })
   }
-
 
   const { totalDocs: postsCount } = await payload.count({
     collection: 'posts',

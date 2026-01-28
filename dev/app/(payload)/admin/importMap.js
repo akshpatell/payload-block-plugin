@@ -1,9 +1,7 @@
-import { BeforeDashboardClient as BeforeDashboardClient_fc6e7dd366b9e2c8ce77d31252122343 } from 'payload-block-plugin/client'
-import { BeforeDashboardServer as BeforeDashboardServer_c4406fcca100b2553312c5a3d7520a3f } from 'payload-block-plugin/rsc'
+import { BeforeDashboardClient as BeforeDashboardClient_7d8b9a88fca99267ca7a2a66e5781a5c } from 'payload-block-plugin/client'
+import { BeforeDashboardServer as BeforeDashboardServer_f48524676675141e0a3f5ee2b045dd46 } from 'payload-block-plugin/rsc'
 
 export const importMap = {
-  'payload-block-plugin/client#BeforeDashboardClient':
-    BeforeDashboardClient_fc6e7dd366b9e2c8ce77d31252122343,
-  'payload-block-plugin/rsc#BeforeDashboardServer':
-    BeforeDashboardServer_c4406fcca100b2553312c5a3d7520a3f,
+  "payload-block-plugin/client#BeforeDashboardClient": BeforeDashboardClient_7d8b9a88fca99267ca7a2a66e5781a5c,
+  "payload-block-plugin/rsc#BeforeDashboardServer": BeforeDashboardServer_f48524676675141e0a3f5ee2b045dd46
 }
