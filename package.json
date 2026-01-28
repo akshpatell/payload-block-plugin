@@ -81,6 +81,7 @@
     "vitest": "^3.1.2"
   },
   "peerDependencies": {
+    "next": "^15.0.0",
     "payload": "^3.37.0"
   },
   "engines": {

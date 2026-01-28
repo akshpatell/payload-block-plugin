@@ -1,6 +1,5 @@
 'use client'
 import { useConfig } from '@payloadcms/ui'
-import { formatAdminURL } from 'payload/shared'
 import { useEffect, useState } from 'react'
 
 export const BeforeDashboardClient = () => {

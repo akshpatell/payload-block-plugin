@@ -1,6 +1,7 @@
 import type { CollectionSlug, Config } from 'payload'
 
 import { customEndpointHandler } from './endpoints/customEndpointHandler.js'
+export { Hero } from './blocks/Hero/config.js'
 
 export type PayloadBlockPluginConfig = {
   /**

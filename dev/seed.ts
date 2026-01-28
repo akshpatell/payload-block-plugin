@@ -18,4 +18,36 @@ export const seed = async (payload: Payload) => {
       data: devUser,
     })
   }
+
+
+  const { totalDocs: postsCount } = await payload.count({
+    collection: 'posts',
+  })
+
+  if (!postsCount) {
+    await payload.create({
+      collection: 'posts',
+      data: {
+        layout: [
+          {
+            blockType: 'hero',
+            headline: 'Welcome to the Hero Plugin',
+            subheadline: 'This content was seeded automatically for testing.',
+            buttons: [
+              {
+                label: 'Primary Action',
+                type: 'primary',
+                link: '#',
+              },
+              {
+                label: 'Secondary Action',
+                type: 'secondary',
+                link: '#',
+              },
+            ],
+          },
+        ],
+      },
+    })
+  }
 }
