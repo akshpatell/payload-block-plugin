@@ -11,10 +11,7 @@ export const BeforeDashboardClient = () => {
   useEffect(() => {
     const fetchMessage = async () => {
       const response = await fetch(
-        formatAdminURL({
-          apiRoute: config.routes.api,
-          path: '/my-plugin-endpoint',
-        }),
+`${config.routes.api}/my-plugin-endpoint`
       )
       const result = await response.json()
       setMessage(result.message)

@@ -27,20 +27,20 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm copyfiles && pnpm build:types && pnpm build:swc",
+    "build": "yarn copyfiles && yarn build:types && yarn build:swc",
     "build:swc": "swc ./src -d ./dist --config-file .swcrc --strip-leading-paths",
     "build:types": "tsc --outDir dist --rootDir ./src",
     "clean": "rimraf {dist,*.tsbuildinfo}",
     "copyfiles": "copyfiles -u 1 \"src/**/*.{html,css,scss,ttf,woff,woff2,eot,svg,jpg,png,json}\" dist/",
     "dev": "next dev dev --turbo",
-    "dev:generate-importmap": "pnpm dev:payload generate:importmap",
-    "dev:generate-types": "pnpm dev:payload generate:types",
+    "dev:generate-importmap": "yarn dev:payload generate:importmap",
+    "dev:generate-types": "yarn dev:payload generate:types",
     "dev:payload": "cross-env PAYLOAD_CONFIG_PATH=./dev/payload.config.ts payload",
-    "generate:importmap": "pnpm dev:generate-importmap",
-    "generate:types": "pnpm dev:generate-types",
+    "generate:importmap": "yarn dev:generate-importmap",
+    "generate:types": "yarn dev:generate-types",
     "lint": "eslint",
     "lint:fix": "eslint ./src --fix",
-    "test": "pnpm test:int && pnpm test:e2e",
+    "test": "yarn test:int && yarn test:e2e",
     "test:e2e": "playwright test",
     "test:int": "vitest"
   },
@@ -56,6 +56,7 @@
     "@playwright/test": "1.56.1",
     "@swc-node/register": "1.10.9",
     "@swc/cli": "0.6.0",
+    "@swc/core": "^1.15.10",
     "@types/node": "^22.5.4",
     "@types/react": "19.2.1",
     "@types/react-dom": "19.2.1",
@@ -84,7 +85,7 @@
   },
   "engines": {
     "node": "^18.20.2 || >=20.9.0",
-    "pnpm": "^9 || ^10"
+    "yarn": "^1"
   },
   "publishConfig": {
     "exports": {
@@ -106,13 +107,6 @@
     },
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "sharp",
-      "esbuild",
-      "unrs-resolver"
-    ]
   },
   "registry": "https://registry.npmjs.org/",
   "dependencies": {}
