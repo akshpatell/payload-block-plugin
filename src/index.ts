@@ -73,9 +73,7 @@ export const payloadBlockPlugin =
     config.admin.components.beforeDashboard.push(
       `payload-block-plugin/client#BeforeDashboardClient`,
     )
-    config.admin.components.beforeDashboard.push(
-      `payload-block-plugin/rsc#BeforeDashboardServer`,
-    )
+    config.admin.components.beforeDashboard.push(`payload-block-plugin/rsc#BeforeDashboardServer`)
 
     config.endpoints.push({
       handler: customEndpointHandler,
@@ -112,3 +110,5 @@ export const payloadBlockPlugin =
 
     return config
   }
+
+export default payloadBlockPlugin
