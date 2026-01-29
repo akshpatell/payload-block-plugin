@@ -7,8 +7,8 @@
     "skipLibCheck": true,
     "strict": true,
     "esModuleInterop": true,
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "paths": {
       "@payload-types": ["./src/payload-types"]

@@ -1,6 +1,6 @@
-# Payload Plugin Template
+# Payload Block Plugin
 
-A template repo to create a [Payload CMS](https://payloadcms.com) plugin.
+A Payload CMS plugin block library.
 
 Payload is built with a robust infrastructure intended to support Plugins with ease. This provides a simple, modular, and reusable way for developers to extend the core capabilities of Payload.
 
@@ -18,7 +18,7 @@ Here is a short recap on how to integrate plugins with Payload, to learn more vi
 To install any plugin, simply add it to your payload.config() in the Plugin array.
 
 ```ts
-import myPlugin from 'my-plugin'
+import myPlugin from '@akshpatell/payload-block-plugin'
 
 export const config = buildConfig({
   plugins: [
